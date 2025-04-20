@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashasvi Bansal</title>
+    <link rel="icon" href="images/website-icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Spline Viewer Script -->
+    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script> -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    <!-- Vanta.js Dependencies -->
+     <!-- globe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+</head>
+<body>
+    <!-- Background container for Vanta -->
+    <div id="vanta-background"></div>
+
+    
+
+    <div class="container">
+        <!-- Smooth cursor elements -->
+        <div class="cursor-outer"></div>
+        <div class="cursor-inner"></div>
+        
+        <!-- Social media links on the right - Floating icons -->
+        <div class="social-links-vertical">
+            <a href="https://github.com/yashasvi-official" class="social-icon" data-tooltip="GitHub" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com" class="social-icon" data-tooltip="LinkedIn" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/yashasvi._bansal?igsh=OHZuM2o5M3lzMHZo&utm_source=qr" class="social-icon" data-tooltip="Instagram" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+            <a href="http://discordapp.com/users/715868590556971019" class="social-icon" data-tooltip="Email Me" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Email">
+            </a>
+        </div>
+
+        <!-- Main content area -->
+        <main class="main-content">
+           
+            <div id="header-container"></div>
+
+            <!-- Content sections -->
+            <section id="home" class="section active">
+                <div class="glass-card">
+                    <div class="center-card-content">
+                        <div class="card-highlight-line"></div>
+                        <h1>Hello, I'm <span class="highlight" id="name-text">Yashasvi</span> <span class="emoji">👨‍💻</span></h1>
+                        <h2>I like to build!</h2>
+                        <p>Developer | Blockchain Developer | UI/UX Designer | Creative Thinker</p>
+                        <a href="#contact" class="btn">
+                            <span class="btn-content">
+                                Contact Me
+                                <i class="fas fa-arrow-right btn-icon"></i>
+                            </span>
+                        </a>
+                        <div class="card-highlight-bottom"></div>
+                    </div>
+                </div>
+            
+            </section>
+
+            <!-- The Journey -->
+            <section id="the-journey" class="section active">
+                <h2>The Journey</h2>
+                <div class="journey-container">
+                    <!-- Journey timeline cards -->
+                    <div class="journey-timeline">
+                        <div class="journey-card" data-position="0" style="opacity: 1; position: absolute; top: 0; left: 0; width: 100%;">
+                            <h3>The Beginning</h3>
+                            <p>Started my journey in computer science with a passion for building projects, learning design and technologies.</p>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="journey-card" data-position="1" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%;">
+                            <h3>Frontend Adventures</h3>
+                            <p>Explored modern frameworks like React and built interactive websites with responsive designs.</p>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="journey-card" data-position="2" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%;">
+                            <h3>Research Intern-Ventured in Blockchain</h3>
+                            <p>Ventured into blockchain development, creating smart contracts and decentralized applications at Cryptography Lab- IIIT Delhi.</p>
+                            <span class="year">2024</span>
+                        </div>
+                        <div class="journey-card" data-position="3" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%;">
+                            <h3>Present Day</h3>
+                            <p>Working as Research Intern at Cryptography Lab- IIIT Delhi, exploring blockchain & cybersecurity. Tryng my hand out at development and competitive coding.</p>
+                            <span class="year">2025 - Present</span>
+                        </div>
+                    </div>
+                    <!-- Spline container -->
+                    <div id="spline-container">
+                        <div id="revolve-hint">
+                            <i class="fas fa-sync-alt"></i> Revolve to Explore
+                        </div>
+                        <spline-viewer url="https://prod.spline.design/dOwNFXnvRVDYFHgW/scene.splinecode" background="transparent" loading-anim="true" orbit-controls="true" id="spline-viewer"></spline-viewer>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 3D Island Element -->
+
+            <section id="about" class="section">
+                <div class="glass-card">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                I'm a passionate computer science student with a keen eye for design and a building projects. I strive to build immersive web experiences
+                                that are both functional and visually appealing.
+                            </p>
+                            <p>
+                                My journey in web development started with HTML, CSS, and JavaScript,
+                                and I've continuously expanded my skills to stay current with modern web technologies. My main focus includes competitive coding, development, and blockchain. Do Reach out :)
+                            </p>
+                        </div>
+                        <div class="about-image">
+                            <img src="images/myPic.png" alt="My Profile Picture">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <div class="glass-card" style="width: 60%;">
+                    <h2>My Skills</h2>
+                    <div class="skills-container">
+                        <div class="skill">
+                            <h3>HTML5</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>CSS3</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>JavaScript</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>Responsive Design</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="glass-card" style="width: 90%;">
+                    <h2>My Projects</h2>
+                    <div class="projects-layout">
+                        <div class="projects-semicircle">
+                            <div class="project-card left-top">
+                                <div class="project-img">
+                                    <img src='images/angryBirdsProject.png' alt="Project 1">
+                                </div>
+                                <h3>Angry Birds Game</h3>
+                                <p>a physics-based game inspired by Angry Birds, developed on Java, OOPs.</p>
+                                <div class="project-links">
+                                    <a href=""><i class="fas fa-external-link-alt"></i> Live</a>
+                                    <a href="https://github.com/yashasvi-official/Angry_Birds" target="_blank">
+                                        <i class="fab fa-github"></i> Code
+                                      </a>
+                                      
+                                </div>
+                            </div>
+                            <div class="project-card left-bottom">
+                                <div class="project-img">
+                                    <img src='images/ResearchCollab.png' alt="Project 2">
+                                </div>
+                                <h3>Research Collab</h3>
+                                <p>Mern Stack based ressearch manangement system</p>
+                                <div class="project-links">
+                                    <a href=""><i class="fas fa-external-link-alt"></i> Live</a>
+                                    <a href="https://github.com/GodMakesMe/ResearchCollab" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                            <div class="project-spline">
+                                <spline-viewer url="https://prod.spline.design/LS9R15Cp9O7hGuSd/scene.splinecode" loading-anim="true"></spline-viewer>
+                            </div>
+                            <div class="project-card right-top">
+                                <div class="project-img">
+                                    <img src='images/BurnAiProject.avif' alt="Project 3">
+                                </div>
+                                <h3>Burn AI</h3>
+                                <p>Computer Vision based home workout assistant.</p>
+                                <div class="project-links">
+                                    <a href=""><i class="fas fa-external-link-alt"></i> Live</a>
+                                    <a href=""><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                            <div class="project-card right-bottom">
+                                <div class="project-img">
+                                    <img src='images/kadena.png' alt="Project 4">
+                                </div>
+                                <h3>E-Voting System</h3>
+                                <p>Kadena Based Decentralized E-Voting System.</p>
+                                <div class="project-links">
+                                    <a href=""><i class="fas fa-external-link-alt"></i> Live</a>
+                                    <a href=""><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="glass-card" style="width: 30%;">
+                    <h2>Contact Info</h2>
+                    <div class="contact-details">
+                        <p><i class="fas fa-user"></i> <strong>Name:</strong> Yashasvi Bansal</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:yashasvi23612@iiitd.ac.in" target="_blank">yashasvi23612@iiitd.ac.in</a></p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 9667879771</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>City:</strong> New Delhi, India</p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        
+    </div>
+    
+
+    <script src="main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const myJourneySection = document.getElementById('my-journey');
+        const homeSection = document.getElementById('home');
+
+        
+        const toggleMyJourneyVisibility = () => {
+            const scrollPosition = window.scrollY;
+            const homeSectionHeight = homeSection.offsetHeight; // Get the height of the home section
+
+            if (scrollPosition > homeSectionHeight) {
+                myJourneySection.classList.add('active');
+            } else {
+                myJourneySection.classList.remove('active');
+            }
+        };
+
+        
+        window.addEventListener('scroll', toggleMyJourneyVisibility);
+
+        
+        toggleMyJourneyVisibility();
+    });
+    </script>
+
+    <style>
+        
+        .journey-timeline {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .journey-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 3px solid #6e57e0;
+            transition: opacity 0.8s ease, transform 0.5s ease;
+            position: relative;
+        }
+        
+        .journey-card h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        
+        .journey-card p {
+            margin-bottom: 10px;
+        }
+        
+        .journey-card .year {
+            display: inline-block;
+            background: #6e57e0;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        /* Social Icons Styles */
+        .social-icons {
+            position: fixed;
+            top: 30%;
+            right: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            z-index: 2000;
+        }
+        
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .social-icons img:hover {
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 10px white);
+        }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        //journey cards
+        const journeyCards = document.querySelectorAll('.journey-card');
+        let currentCardIndex = 0; // Start with the first card visible
+        
+        // change to a specific card with fade effect
+        const changeCard = (newIndex) => {
+            if (newIndex === currentCardIndex) return; // No change needed
+            
+            // Fade out current card
+            journeyCards[currentCardIndex].style.opacity = '0';
+            
+            // Fade in 
+            setTimeout(() => {
+                journeyCards[newIndex].style.opacity = '1';
+                currentCardIndex = newIndex;
+            }, 300);
+        };
+        
+        
+        const splineContainer = document.getElementById('spline-container');
+        
+        splineContainer.addEventListener('mousemove', (e) => {
+            
+            const containerRect = splineContainer.getBoundingClientRect();
+            const mouseX = e.clientX - containerRect.left;
+            const containerWidth = containerRect.width;
+            
+            
+            const section = Math.floor((mouseX / containerWidth) * 4);
+            
+            
+            changeCard(Math.min(section, 3));
+        });
+        
+        // keyboard controls for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                
+                const nextIndex = (currentCardIndex + 1) % journeyCards.length;
+                changeCard(nextIndex);
+            } else if (e.key === 'ArrowLeft') {
+                
+                const prevIndex = (currentCardIndex - 1 + journeyCards.length) % journeyCards.length;
+                changeCard(prevIndex);
+            }
+        });
+        
+        // Touch swipe support
+        let touchStartX = 0;
+        splineContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+        
+        splineContainer.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchEndX - touchStartX;
+            
+            if (Math.abs(diff) > 50) { 
+                if (diff > 0) {
+
+                    const prevIndex = (currentCardIndex - 1 + journeyCards.length) % journeyCards.length;
+                    changeCard(prevIndex);
+                } else {
+                    
+                    const nextIndex = (currentCardIndex + 1) % journeyCards.length;
+                    changeCard(nextIndex);
+                }
+            }
+        });
+        
+        //  Spline viewer for orbital control
+        const splineViewer = document.querySelector('spline-viewer');
+        
+        //  detect when Spline viewer is loaded
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'loaded') {
+                    if (splineViewer.getAttribute('loaded') === 'true') {
+                        console.log('Spline viewer loaded');
+                        
+                       
+                        if (splineViewer.runtime) {
+                            console.log('Spline runtime available');
+                            
+                            
+                            setInterval(() => {
+                                if (splineViewer.runtime && splineViewer.runtime.camera) {
+                                    const rotation = splineViewer.runtime.camera.rotation;
+                                    if (rotation) {
+                                        // Get the angle in XZ plane (horizontal rotation)
+                                        const angle = Math.atan2(rotation.z, rotation.x) * (180 / Math.PI);
+                                        const normalizedAngle = (angle + 360) % 360;
+                                        
+                                        // Dividing the full rotation into 4 sections (0-3)
+                                        const section = Math.floor(normalizedAngle / 90);
+                                        changeCard(section);
+                                    }
+                                }
+                            }, 300);
+                        }
+                    }
+                }
+            });
+        });
+        
+       
+        observer.observe(splineViewer, { attributes: true });
+    });
+    </script>
+
+    <!--Vanta.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            VANTA.GLOBE({
+            el: "#vanta-background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            baseColor: 0x0f0f1e,
+            backgroundColor: 0x121212,
+            scale: 1.00,
+            scaleMobile: 1.00
+            })
+            // VANTA.HALO({
+            //     el: "#vanta-background",
+            //     mouseControls: true,
+            //     touchControls: true,
+            //     gyroControls: false,
+            //     minHeight: 200.00,
+            //     minWidth: 200.00,
+            //     baseColor: 0x0f0f1e,
+            //     backgroundColor: 0x121212,
+            //     amplitudeFactor: 1.60,
+            //     xOffset: 0.15,
+            //     size: 1.10
+            // })
+
+            // VANTA.NET({
+            // el: "#vanta-background",
+            // mouseControls: true,
+            // touchControls: true,
+            // gyroControls: false,
+            // minHeight: 200.00,
+            // minWidth: 200.00,
+            // baseColor: 0x0f0f1e,
+            // backgroundColor: 0x121212,
+            // scale: 1.00,
+            // scaleMobile: 1.00
+            // })
+
+            // VANTA.BIRDS({
+            // el: "#vanta-background",
+            // mouseControls: true,
+            // touchControls: true,
+            // gyroControls: false,
+            // minHeight: 200.00,
+            // minWidth: 200.00,
+            // baseColor: 0x0f0f1e,
+            // backgroundColor: 0x121212,
+            // scale: 1.00,
+            // scaleMobile: 1.00,
+            // speedLimit: 7.00,
+            // cohesion: 28.00
+            // })
+
+        });
+    </script>
+</body>
+</html> 
