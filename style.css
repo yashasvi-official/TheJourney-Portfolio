@@ -563,6 +563,81 @@ body::before {
     max-width: 1200px;
 }
 
+/* spline overlay bot */
+.watermark-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+    height: 12%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(2000px);
+    border-radius: 10px 10px 10px 10px;
+    border-top: 1px solid rgba(120, 120, 255, 0.3);
+    box-shadow: 
+        0 -5px 15px rgba(0, 0, 0, 0.2),
+        0 -10px 30px rgba(255, 255, 255, 0.4),
+        0 -5px 60px rgba(170, 200, 255, 0.6);
+    z-index: 999;
+    animation: glowPulse 3s infinite alternate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watermark-overlay::after {
+    content: 'PROJECT-O-BOT';
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
+
+.watermark-overlay::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(170, 200, 255, 0.4) 30%, transparent 70%);
+    transform: translateY(50%);
+    filter: blur(20px);
+    z-index: -1;
+    animation: floatGlow 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 
+            0 -5px 15px rgba(0, 0, 0, 0.2),
+            0 -10px 30px rgba(255, 255, 255, 0.3),
+            0 -5px 60px rgba(170, 200, 255, 0.4);
+    }
+    100% {
+        box-shadow: 
+            0 -5px 15px rgba(0, 0, 0, 0.2),
+            0 -10px 40px rgba(255, 255, 255, 0.5),
+            0 -5px 80px rgba(170, 200, 255, 0.7);
+    }
+}
+
+@keyframes floatGlow {
+    0%, 100% {
+        transform: translateY(50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(45%) scale(1.1);
+        opacity: 0.8;
+    }
+}
 
 .projects-layout {
     width: 100%;
