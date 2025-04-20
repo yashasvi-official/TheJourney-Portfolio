@@ -1,4 +1,3 @@
-
 window.audioPlayer = null;
 window.audioSongs = ['assets/night-changes.mp3', 'assets/happy.mp3'];
 window.audioCurrentIndex = 0;
@@ -286,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     });
 
-    // Remove existing cursor trailer if it exists
+    // Removeing existing
     const existingTrailer = document.querySelector('.cursor-trailer');
     if (existingTrailer) {
         existingTrailer.remove();
@@ -296,53 +295,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursorOuter = document.querySelector('.cursor-outer');
     const cursorInner = document.querySelector('.cursor-inner');
     const body = document.body;
-    
+
     let mouseX = 0;
     let mouseY = 0;
     let outerX = 0;
     let outerY = 0;
     let innerX = 0;
     let innerY = 0;
-    
+
     // Update mouse position
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        
+
         // Show cursor when mouse moves
         body.classList.remove('cursor-hidden');
     });
-    
-    // Hide cursor when mouse leaves window
-    document.addEventListener('mouseout', () => {
+
+    // Hide cursor when mouse leaves the window
+    document.addEventListener('mouseleave', () => {
         body.classList.add('cursor-hidden');
     });
-    
-    // Animate the cursor with smooth follow
+
+ 
     const animateCursor = () => {
-        // Smooth follow for outer cursor
-        outerX += (mouseX - outerX) * 0.15;
-        outerY += (mouseY - outerY) * 0.15;
         
-        // Smoother follow for inner cursor
-        innerX += (mouseX - innerX) * 0.25;
-        innerY += (mouseY - innerY) * 0.25;
-        
-        // Apply positions
+        const outerEase = 0.6;
+        const innerEase = 0.9;
+
+     
+        outerX += (mouseX - outerX) * outerEase;
+        outerY += (mouseY - outerY) * outerEase;
+        innerX += (mouseX - innerX) * innerEase;
+        innerY += (mouseY - innerY) * innerEase;
+
+       
         if (cursorOuter) {
-            cursorOuter.style.transform = `translate(${outerX}px, ${outerY}px)`;
+            cursorOuter.style.transform = `translate(${outerX}px, ${outerY}px) translate(-50%, -50%)`;
         }
-        
+
         if (cursorInner) {
-            cursorInner.style.transform = `translate(${innerX}px, ${innerY}px)`;
+            cursorInner.style.transform = `translate(${innerX}px, ${innerY}px) translate(-50%, -50%)`;
         }
-        
-        // Continue animation
+
+      
         requestAnimationFrame(animateCursor);
     };
-    
-    // Start animation
+
+    // Start the loop
     animateCursor();
+
     
     // Add hover effects for clickable elements
     const handleHoverEvents = () => {
