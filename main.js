@@ -152,6 +152,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const splineContainer = document.getElementById('spline-container');
         const journeySection = document.getElementById('the-journey');
         
+        // Add mobile menu toggle
+        const header = document.querySelector('.header');
+        if (header && !document.querySelector('.menu-toggle')) {
+            const menuToggle = document.createElement('div');
+            menuToggle.className = 'menu-toggle';
+            menuToggle.innerHTML = '<span></span><span></span><span></span>';
+            header.appendChild(menuToggle);
+            
+            const navMenu = header.querySelector('nav ul');
+            if (navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    console.log('Menu toggled');
+                });
+            }
+        }
+        
         // Function to switch active section
         function switchSection(id) {
             // Hide all sections
